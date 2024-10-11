@@ -13,7 +13,7 @@ public class WebDriverManager {
     private WebDriverManager() {}
 
     private void initDriver(String browser) {
-        switch(browser) {
+        switch(browser.toLowerCase()) {
             case "chrome":
                 tlDriver.set(new ChromeDriver());
                 break;

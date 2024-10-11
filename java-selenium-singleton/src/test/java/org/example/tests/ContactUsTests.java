@@ -12,18 +12,16 @@ import org.testng.annotations.*;
 import java.time.Duration;
 import java.util.ArrayList;
 
-public class ContactUsTests {
+public class ContactUsTests extends BaseTest {
 
     private WebDriver driver;
     private WebDriverWait wait;
     private String mainWindowHandle;
 
     @BeforeClass
-    @Parameters({"browser", "EnvironmentURL"})
-    public void setUp(String browser, String EnvironmentURL) {
-        driver = WebDriverManager.getInstance(browser).getDriver();
-        driver.get(EnvironmentURL);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+    public void setUp() {
+        driver = BaseTest.driver;
+        wait = BaseTest.wait;
     }
 
     @BeforeMethod
@@ -110,11 +108,6 @@ public class ContactUsTests {
     public void switchToHomePage() {
         driver.close();
         driver.switchTo().window(mainWindowHandle);
-    }
-
-    @AfterClass
-    public void tearDown() {
-        WebDriverManager.quitBrowser();
     }
 
 }

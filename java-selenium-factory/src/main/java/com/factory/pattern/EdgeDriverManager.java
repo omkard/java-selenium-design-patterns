@@ -1,4 +1,4 @@
-package org.example;
+package com.factory.pattern;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;

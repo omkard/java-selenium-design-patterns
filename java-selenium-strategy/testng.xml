@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Factory Pattern Suite" parallel="tests" thread-count="2" verbose="3" >
+
+    <parameter name="EnvironmentURL" value="https://rahulshettyacademy.com/AutomationPractice/" />
+    <parameter name="browser" value="firefox" />
+
+    <test name="Strategy Pattern Tests" >
+        <classes>
+            <class name="com.pattern.strategy.tests.StrategyExampleTest" />
+        </classes>
+    </test>
+
+</suite>
